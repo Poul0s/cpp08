@@ -19,7 +19,7 @@ jobs:
     - name: compilation of ex00
       run: make -C ./ex00
     - name: run tests ex00
-      run: valgrind --leak-check=full --track-fds=yes ./ex00/whatever
+      run: valgrind --leak-check=full --track-fds=yes ./ex00/easyfind
 
   ex01:
 
@@ -32,7 +32,7 @@ jobs:
     - name: compilation of ex01
       run: make -C ./ex01
     - name: run tests ex01
-      run: valgrind  --leak-check=full --track-fds=yes --error-exitcode=1 ./ex01/iter
+      run: valgrind  --leak-check=full --track-fds=yes --error-exitcode=1 ./ex01/span
 
   ex02:
 
@@ -45,4 +45,4 @@ jobs:
     - name: compilation of ex02
       run: make -C ./ex02
     - name: run tests ex02
-      run: valgrind  --leak-check=full --track-fds=yes --error-exitcode=1 ./ex02/array
+      run: valgrind  --leak-check=full --track-fds=yes --error-exitcode=1 ./ex02/mutantStack
