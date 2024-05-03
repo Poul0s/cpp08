@@ -11,7 +11,7 @@ OBJ_DIR	=	$(sort $(dir $(OBJ)))
 
 HEADER	=	-I.
 
-NAME	=	Span
+NAME	=	span
 
 all: $(NAME)
 
