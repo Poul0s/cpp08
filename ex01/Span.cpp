@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 17:46:47 by psalame           #+#    #+#             */
-/*   Updated: 2024/05/03 15:44:55 by psalame          ###   ########.fr       */
+/*   Updated: 2024/05/03 15:54:14 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	Span::addNumber(int number)
 
 void	Span::insert(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-	if (this->_lst.size() + (end - begin) >= this->_maxSize)
+	if (this->_lst.size() + (end - begin) > this->_maxSize)
 		throw SpanFullException();
 	this->_lst.insert(this->_lst.end(), begin, end);
 }
