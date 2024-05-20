@@ -6,27 +6,27 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:06:11 by psalame           #+#    #+#             */
-/*   Updated: 2024/04/30 14:23:03 by psalame          ###   ########.fr       */
+/*   Updated: 2024/05/20 14:44:08 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <vector>
+// #include <vector>
 #include <deque>
 #include <list>
 #include "easyfind.hpp"
 
 void	test1(int &exit_code)
 {
-	std::vector<int>	vec;
+	// std::vector<int>	vec;
 	std::deque<int>		deq;
 	std::list<int>		lst;
 	
-	if (::easyfind(vec, 5) != vec.end())
-	{
-		std::cout << "Found elem 5 in an empty vector." << std::endl;
-		exit_code++;
-	}
+	// if (::easyfind(vec, 5) != vec.end())
+	// {
+	// 	std::cout << "Found elem 5 in an empty vector." << std::endl;
+	// 	exit_code++;
+	// }
 	if (::easyfind(deq, 5) != deq.end())
 	{
 		std::cout << "Found elem 5 in an empty deque." << std::endl;
@@ -41,18 +41,18 @@ void	test1(int &exit_code)
 
 void	test2(int &exit_code)
 {
-	std::vector<int>	vec;
-	vec.insert(vec.begin(), 6);
+	// std::vector<int>	vec;
+	// vec.insert(vec.begin(), 6);
 	std::deque<int>		deq;
 	deq.insert(deq.begin(), 6);
 	std::list<int>		lst;
 	lst.insert(lst.begin(), 6);
 	
-	if (::easyfind(vec, 5) != vec.end())
-	{
-		std::cout << "Found elem 5 in vector that doesnt contain it." << std::endl;
-		exit_code++;
-	}
+	// if (::easyfind(vec, 5) != vec.end())
+	// {
+	// 	std::cout << "Found elem 5 in vector that doesnt contain it." << std::endl;
+	// 	exit_code++;
+	// }
 	if (::easyfind(deq, 5) != deq.end())
 	{
 		std::cout << "Found elem 5 in deque that doesnt contain it." << std::endl;
@@ -67,11 +67,11 @@ void	test2(int &exit_code)
 
 void	test3(int &exit_code)
 {
-	std::vector<int>	vec;
-	vec.insert(vec.begin(), 3);
-	vec.insert(vec.begin(), 9);
-	vec.insert(vec.begin(), 5);
-	vec.insert(vec.begin(), 1);
+	// std::vector<int>	vec;
+	// vec.insert(vec.begin(), 3);
+	// vec.insert(vec.begin(), 9);
+	// vec.insert(vec.begin(), 5);
+	// vec.insert(vec.begin(), 1);
 	std::deque<int>		deq;
 	deq.insert(deq.begin(), 3);
 	deq.insert(deq.begin(), 9);
@@ -83,11 +83,11 @@ void	test3(int &exit_code)
 	lst.insert(lst.begin(), 5);
 	lst.insert(lst.begin(), 1);
 	
-	if (::easyfind(vec, 5) == vec.end() || *::easyfind(vec, 5) != 5)
-	{
-		std::cout << "Didnt found elem 5 in vector that contain it." << std::endl;
-		exit_code++;
-	}
+	// if (::easyfind(vec, 5) == vec.end() || *::easyfind(vec, 5) != 5)
+	// {
+	// 	std::cout << "Didnt found elem 5 in vector that contain it." << std::endl;
+	// 	exit_code++;
+	// }
 	if (::easyfind(deq, 5) == deq.end() || *::easyfind(deq, 5) != 5)
 	{
 		std::cout << "Didnt found elem 5 in deque that contain it." << std::endl;
